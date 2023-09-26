@@ -1,0 +1,23 @@
+  .table-container {
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        .table {
+            width: 100%;
+        }
+        th {
+            padding: 10px; /* Add some padding to th elements */
+        }
+        th, td {
+            text-align: left;
+            padding: 10px; /* Add some padding for better readability */
+        }
+        .w-25 {
+            width: 25%;
+        }
+        .w-40 {
+            width: 40%;
+        }
+        .w-10 {
+            width: 10%;
+        }

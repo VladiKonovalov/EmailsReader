@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Compose Email</title>
+	<link rel="stylesheet" href="/css/email.css">
+
+</head>
+<body>
+<h1>Compose Email</h1>
+<form id="composeForm" method="post" action="/sendEmail">
+	<div>
+		<label for="from">From:</label>
+		<input type="text" id="from" name="from" required  th:value="${from}">
+	</div>
+	<div>
+		<label for="recipient">To:</label>
+		<input type="text" id="recipient" name="to" required  th:value="${to}">
+	</div>
+	<div>
+	<label for="subject">Subject:</label>
+
+	<input type="text" id="subject" name="subject"  th:text="*{subject}">
+
+	</div>
+	<div>
+		<label for="body">Body:</label>
+		<input type="text" id="body" name="body"  th:text="*{body}">
+	</div>
+	<div>
+		<button type="submit" class="btn btn-primary btn-submit">Send</button>
+
+		<button type="button" onclick="goBack()">Back</button>
+	</div>
+</form>
+
+</body>
+</html>
